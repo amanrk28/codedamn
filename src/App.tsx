@@ -1,8 +1,8 @@
-import Editor from '@monaco-editor/react';
+import { LiveBrowser } from 'components/live-browser';
 import { MEditor } from 'components/monaco-editor';
 import { Navbar } from 'components/navbar';
 import { Sidebar } from 'components/sidebar';
-import { XTerminal } from 'components/xterm';
+import { XTerminal } from 'components/xterm/xterm';
 import {
   ReflexContainer,
   ReflexSplitter,
@@ -16,25 +16,23 @@ const App = () => {
         <Navbar />
         <ReflexContainer className="border-y border-t-0 border-neutral-700" windowResizeAware>
           <ReflexElement>
-            <ReflexContainer orientation="vertical">
+            <ReflexContainer orientation="vertical" windowResizeAware>
 
               {/* Add Sidebar */}
-              <ReflexElement>
+              <ReflexElement minSize={48} flex={0.2}>
                 <Sidebar />
               </ReflexElement>
 
               <ReflexSplitter />
 
               {/* Code Editor + Terminal */}
-              <ReflexElement>
-                <ReflexContainer>
-                  {/* Code Editor */}
-                  <ReflexElement>
+              <ReflexElement flex={0.45}>
+                <ReflexContainer windowResizeAware>
+                  <ReflexElement flex={0.8} propagateDimensions>
                     <MEditor />
                   </ReflexElement>
                   <ReflexSplitter />
-                  {/* Terminal */}
-                  <ReflexElement minSize={10} maxSize={190}>
+                  <ReflexElement flex={0.2}>
                     <XTerminal />
                   </ReflexElement>
                 </ReflexContainer>
@@ -43,8 +41,8 @@ const App = () => {
               <ReflexSplitter />
 
               {/* Browser Output */}
-              <ReflexElement minSize={200} maxSize={800}>
-                {/* <MEditor /> */}
+              <ReflexElement flex={0.35}>
+                <LiveBrowser />
               </ReflexElement>
             </ReflexContainer>
           </ReflexElement>

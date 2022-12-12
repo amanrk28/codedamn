@@ -19,10 +19,15 @@ export const editorOptions = {
     folding: true,
     foldingStrategy: 'auto',
     fontLigatures: false,
+    fontSize: 14,
     formatOnPaste: false,
     formatOnType: false,
     hideCursorInOverviewRuler: false,
     highlightActiveIndentGuide: true,
+    inlayHints: {
+        enabled: 'on',
+        fontFamily: 'Menlo, Monaco, Courier New, monospace',
+    },
     links: true,
     mouseWheelZoom: false,
     multiCursorMergeOverlapping: true,
@@ -57,4 +62,5 @@ export const editorOptions = {
     wordWrapColumn: 80,
     wordWrapMinified: true,
     wrappingIndent: 'none',
-}
+    'bracketPairColorization.enabled': true,
+};

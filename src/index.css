@@ -8,7 +8,6 @@
   margin: 0;
   outline: none;
   padding: 0;
-  max-width: 100%;
 }
 
 body {
@@ -35,28 +34,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-/* .gutter {
-  background-color: #e5e7eb;
-  background-repeat: no-repeat;
-  background-position: 50%;
-}
-
-.gutter.gutter-horizontal {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
-  cursor: col-resize;
-}
-.gutter.gutter-horizontal:hover {
-  background-color: blue;
-}
-
-.gutter.gutter-vertical {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
-  cursor: row-resize;
-}
-.gutter.gutter-vertical:hover {
-  background-color: blue;
-} */
-
 body .reflex-container.vertical > .reflex-splitter {
   background: #3b3b3b;
   border: 0;
@@ -74,4 +51,14 @@ body .reflex-container.vertical > .reflex-splitter:hover {
 body .reflex-container.horizontal > .reflex-splitter:hover {
   border: 0;
   background: #14b3ff;
+}
+
+.monaco-scrollable-element > .scrollbar > .slider {
+  background: rgba(78, 86, 102, 0.5);
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+.invisible {
+  visibility: hidden;
 }
