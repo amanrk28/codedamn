@@ -1,0 +1,6 @@
+.content-area {
+    flex-grow: 1;
+    max-height: 100vh;
+    overflow-y: auto;
+    position: relative;
+}

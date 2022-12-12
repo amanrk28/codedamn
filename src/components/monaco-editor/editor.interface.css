@@ -1,0 +1,51 @@
+.editor-parent,
+.monaco-editor-inst {
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-interface {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    max-height: calc(100% - 40px);
+}
+.monaco-editor-inst {
+    flex-grow: 1;
+    max-height: 100%;
+}
+
+.react-contextmenu-wrapper {
+    height: 100%;
+}
+
+.tabs {
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: flex-start;
+    flex: 0 0 35px;
+    background: #191919;
+    border-bottom: 1px solid #232323;
+    scroll-behavior: smooth;
+}
+
+.tab {
+    background-color: #2d2d2d;
+    color: #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+    cursor: pointer;
+    height: 100%;
+    border-top: 2px solid transparent;
+    width: max-content;
+    font-size: 14px;
+}
+
+.tab.active {
+    background: #1e1e1e;
+    color: #fff;
+    border-top: 2px solid salmon;
+}
