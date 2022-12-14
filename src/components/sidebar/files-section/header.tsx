@@ -1,7 +1,7 @@
 import { VscNewFile, VscNewFolder, VscCollapseAll, VscEllipsis, VscFeedback, VscCloudDownload } from 'react-icons/vsc';
 import { Menu } from '@headlessui/react';
 
-export const TopNav = () => {
+export const FilesHeader = () => {
     return (
         <div className="sticky top-0 left-0 z-50 flex items-center bg-[#252525] px-2 py-2 text-xs shadow">
             <div className="flex-grow font-bold uppercase">Code</div>

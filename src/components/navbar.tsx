@@ -2,6 +2,17 @@ import { AiOutlineShareAlt, AiOutlineFork } from 'react-icons/ai';
 
 const codedamnLogo = 'https://wsrv.nl/?url=https://codedamn.com/assets/images/favicons/favicon-96x96.png&w=60&q=70&output=webp'
 
+const navButtons = [
+    {
+        label: 'Share',
+        icon: AiOutlineShareAlt,
+    },
+    {
+        label: 'Fork',
+        icon: AiOutlineFork,
+    },
+];
+
 export const Navbar = () => {
     return (
         <div className="flex text-neutral-100 bg-[#141414] border-b border-neutral-800 w-full items-center px-3.5 py-0.5 text-sm">
@@ -19,14 +30,12 @@ export const Navbar = () => {
                 <div className="flex -space-x-2 overflow-hidden" />
             </div>
             <div className="ml-1 mr-2 flex items-center justify-end space-x-4">
-                <button className="my-1 flex items-center gap-2 rounded-sm bg-neutral-700 bg-opacity-30 py-1 px-4 text-sm text-white ring-1 ring-neutral-600 hover:bg-opacity-70">
-                    <AiOutlineShareAlt size={24} />
-                    <span className="text-sm">Share</span>
-                </button>
-                <button className="my-1 flex items-center gap-2 rounded-sm bg-neutral-700 bg-opacity-30 py-1 px-4 text-sm text-white ring-1 ring-neutral-600 hover:bg-opacity-70">
-                    <AiOutlineFork size={24} />
-                    <span className="text-sm">Fork</span>
-                </button>
+                {navButtons.map(btn => (
+                    <button className="my-1 flex items-center gap-2 rounded-sm bg-neutral-700 bg-opacity-30 py-1 px-4 text-sm text-white ring-1 ring-neutral-600 hover:bg-opacity-70" key={btn.label}>
+                        <btn.icon size={24} />
+                        <span className="text-sm">{btn.label}</span>
+                    </button>
+                ))}
             </div>
         </div>
     )
